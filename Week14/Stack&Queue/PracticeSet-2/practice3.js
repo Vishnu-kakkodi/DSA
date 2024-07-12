@@ -66,7 +66,7 @@
 class Stack {
     constructor() {
         this.stack = [];
-        this.middleIndex = null; // This will keep track of the middle element index
+        this.middleIndex = null; 
     }
 
     push(value) {
@@ -131,20 +131,19 @@ class Stack {
     }
 }
 
-// Example usage
 const stk = new Stack();
-console.log(stk.isEmpty()); // true
+console.log(stk.isEmpty());
 stk.push(1);
 stk.push(2);
 stk.push(3);
 stk.push(4);
 stk.push(5);
-stk.display(); // [1, 2, 3, 4, 5]
-console.log(stk.findMiddle()); // 3
+stk.display(); 
+console.log(stk.findMiddle()); 
 stk.pop();
-stk.display(); // [1, 2, 3, 4]
-console.log(stk.findMiddle()); // 2
+stk.display(); 
+console.log(stk.findMiddle()); 
 stk.pop();
-stk.display(); // [1, 2, 3]
-console.log(stk.findMiddle()); // 2
+stk.display(); 
+console.log(stk.findMiddle()); 
 

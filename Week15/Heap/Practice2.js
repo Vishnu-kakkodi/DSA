@@ -5,7 +5,7 @@ class MinHeap{
 
     insert(value){
         this.heap.push(value);
-        this.bubbleUp(this.heap.length-1);
+        this.bubbleUp(this.heap.length-1)
     }
 
     bubbleUp(index){
@@ -18,7 +18,7 @@ class MinHeap{
     }
 
     extractMin(){
-        if(this.heap.length ===0)return null
+        if(this.heap.length===0)return null
         if(this.heap.length===1)return this.heap.pop();
         const min = this.heap[0]
         this.heap[0] = this.heap.pop();
@@ -27,18 +27,17 @@ class MinHeap{
     }
 
     bubbleDown(index){
-        let leftchildIndex = 2*index+1;
-        let rightchildIndex = 2*index+2;
-        let smallest = index;
+        let leftchildIndex = 2*index+1
+        let rightchildIndex = 2*index+2
+        let smallest = index
         if(leftchildIndex<this.heap.length&&this.heap[leftchildIndex]<this.heap[smallest]){
-            smallest = leftchildIndex;
+            smallest = leftchildIndex
         }
         if(rightchildIndex<this.heap.length&&this.heap[rightchildIndex]<this.heap[smallest]){
             smallest = rightchildIndex
         }
-
         if(smallest!==index){
-            [this.heap[smallest],this.heap[index]]=[this.heap[index],this.heap[smallest]]
+            [this.heap[smallest],this.heap[index]] = [this.heap[index],this.heap[smallest]]
             this.bubbleDown(smallest)
         }
     }
